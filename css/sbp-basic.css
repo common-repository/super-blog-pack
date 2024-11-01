@@ -1,0 +1,358 @@
+/**
+ * Clearing
+ */
+.clearfix:before,
+.clearfix:after, {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * Star ratings
+ */
+.ts-star-rating {
+	position: relative;
+	display: table;
+}
+
+.ts-star-rating .lit-stars,
+.ts-star-rating .unlit-stars {
+	font-size: 0;
+	letter-spacing: 0;
+}
+
+.ts-star-rating .lit-stars {
+	position: absolute;
+	white-space: nowrap;
+	overflow: hidden;
+	top: 0;
+	width: 50%;
+}
+
+.ts-star-rating .star {
+	display: inline-block;
+	font-size: 15px;
+	line-height: 1em;
+	width: 1.15em;
+	text-align: center;
+}
+
+.ts-star-rating .star:last-child {
+	margin-right: 0;
+}
+
+.ts-star-rating .unlit-stars .star {
+	color: #d2d2d2;
+}
+
+.ts-star-rating .lit-stars .star {
+	color: #ffcb31;
+}
+
+/**
+ * Entry meta
+ */
+.sbp-entry-meta {
+	margin: 0 0 20px;
+}
+
+.sbp-entry-meta > .ts-star-rating {
+	display: inline-table;
+}
+
+.sbp-entry-meta > .ts-star-rating,
+.sbp-entry-meta > a {
+	margin: 0;
+	margin-right: 10px;
+}
+
+.sbp-entry-meta > a {
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1em;
+}
+
+.ts-post-like-button.already-liked {
+    color: #6da742;
+}
+
+/**
+ * Related posts
+ */
+.ts-spb-related-posts {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.ts-spb-related-posts .ts-spb-related-entry {
+	text-align: center;
+	padding: 0 15px;
+	float: left;
+	width: 100%;
+}
+
+.ts-spb-related-posts .ts-spb-related-entry img {
+    max-width: 150px;
+}
+
+.ts-spb-related-posts .ts-spb-related-entry a:hover img {
+	opacity: 0.9;
+}
+
+.ts-spb-related-posts .ts-spb-related-entry .title {
+	display: block;
+}
+
+.ts-spb-related-posts .ts-spb-related-entry a:hover .title {
+	text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+	.ts-spb-related-posts.col-2 .ts-spb-related-entry {
+		width: 50%;
+	}
+
+	.ts-spb-related-posts.col-3 .ts-spb-related-entry {
+		width: 33.33%;
+	}
+
+	.ts-spb-related-posts.col-4 .ts-spb-related-entry {
+		width: 25%;
+	}
+}
+
+.ts-spb-related-posts:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/**
+ * Review Blocks
+ */
+.sbp-review-dialog {
+    background: #f7f7f7;
+    padding: 15px;
+    border: 1px solid #efefef;
+    border-bottom: none;
+    transition: background ease 0.25s;
+}
+
+.sbp-review-dialog.active {
+    background: #efefef;
+    padding: 15px;
+    border: 1px solid #efefef;
+    border-bottom: none;
+}
+
+.sbp-review-dialog .dialog-body {
+    display: none;
+}
+
+.sbp-review-dialog .dialog-header {
+    display: table;
+    width: 100%;
+}
+
+.sbp-review-dialog .dialog-header .dialog-title {
+    margin: 0;
+    float: left;
+    clear: none;
+}
+
+.sbp-review-dialog .dialog-header .ts-star-rating {
+    float: right;
+}
+
+.sbp-review-dialog .dialog-body .star-ratings-group {
+    list-style: none;
+    border-top: 1px solid #efefef;
+    margin-top: 25px;
+    transition: all ease 0.25s;
+}
+
+.sbp-review-dialog.active .dialog-body .star-ratings-group {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.sbp-review-dialog .dialog-body .star-ratings-group .review-group-item {
+    display: table;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.sbp-review-dialog .dialog-body .star-ratings-group .review-group-item .rating-subject {
+    margin: 0;
+    float: left;
+}
+
+.sbp-review-dialog .dialog-body .star-ratings-group .review-group-item .ts-star-rating {
+    float: right;
+}
+
+.sbp-review-dialog .dialog-body .review {
+	display: table;
+	width: 100%;
+}
+
+.sbp-review-dialog .dialog-body .review img {
+    float: left;
+    width: 50px;
+    margin: 0 15px 15px 0;
+}
+
+/**
+ * Review form
+ */
+.sbp-user-review-form .form-hidden {
+	display: none;
+}
+
+.sbp-user-review-form {
+    background: #fbfbfb;
+    padding: 15px;
+    border: 1px solid #efefef;
+}
+
+.sbp-user-review-form .user-ratings .rating-field {
+    border-bottom: 1px solid #efefef;
+    padding: 10px 0;
+    display: table;
+    width: 100%;
+}
+
+.sbp-user-review-form .user-ratings .rating-field .rating-title {
+    float: left;
+    margin: 0;
+}
+
+.sbp-user-review-form .user-ratings .rating-field .ts-star-rating {
+    float: right;
+    margin: 0;
+}
+
+.sbp-user-review-form .user-ratings .rating-field .rating-title .rating-label {
+    margin: 0;
+}
+
+.sbp-user-review-form .sbp-notice {
+	display: none;
+}
+
+.sbp-user-review-form .user-ratings {
+    margin: 0 0 30px;
+}
+
+.sbp-user-review-form .user-ratings .rating-field:last-child {
+    border-bottom: 0;
+}
+
+.sbp-user-review-form .review-form-opener {
+    cursor: pointer;
+}
+
+.sbp-user-review-form .review-form-opener h5 {
+    margin: 0;
+}
+
+.sbp-user-review-form form {
+    margin-top: 15px;
+    border-top: 1px solid #d8d8d8;
+    padding-top: 15px;
+}
+
+.sbp-user-review-form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.star-form, .star-form .star {
+	cursor: pointer;
+}
+
+.star-form .lit-stars {
+	pointer-events: none;
+}
+
+/**
+ * Review nav
+ */
+.post-reviews-navigation {
+    display: table;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.post-reviews-navigation ul {
+    list-style: none;
+    float: left;
+    margin: 0 -8px;
+}
+
+.post-reviews-navigation ul li {
+    float: left;
+    padding: 0 8px;
+    line-height: 40px;
+}
+
+.post-reviews-navigation ul li .current,
+.post-reviews-navigation ul li a {
+    display: block;
+    padding: 0 10px;
+    background: #f7f7f7;
+    line-height: 40px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.post-reviews-navigation ul li .page-numbers {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.post-reviews-navigation ul li .current {
+    background: #333b3c;
+    color: #fff;
+}
+
+/**
+ * Notice
+ */
+.sbp-notice {
+	border: 1px solid;
+	padding: 15px;
+	border-radius: 4px;
+}
+
+.sbp-notice p {
+	margin: 0;
+}
+
+.sbp-notice.sbp-error {
+	color: #e88282;
+	background: #ffd9d9;
+	box-shadow: inset rgba(247, 206, 206, 0.56) 0 0 16px;
+}
+
+/**
+ * Share
+ */
+.ts-sbp-share-links ul {
+    float: left;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0 !important;
+}
+
+.ts-sbp-share-links ul li {
+    float: left;
+    margin: 10px;
+    list-style: none !important;
+}
